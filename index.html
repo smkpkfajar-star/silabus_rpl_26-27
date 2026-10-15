@@ -1,0 +1,789 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Silabus RPL SMK — Kelas X, XI, XII</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+
+<style>
+:root {
+  --bg:        #F7F9FC;
+  --bg-card:   #FFFFFF;
+  --bg-header: #0D1829;
+  --bg-band:   #EDF1FB;
+  --fg:        #18243E;
+  --fg-muted:  #566080;
+  --fg-light:  #8A97B8;
+  --accent:    #2563EB;
+  --accent-3:  #60A5FA;
+  --success:   #059669;
+  --warning:   #D97706;
+  --danger:    #DC2626;
+  --border:    #D5DCF0;
+  --shadow:    0 1px 3px rgba(20,40,100,.07),0 4px 14px rgba(20,40,100,.05);
+  --radius:    10px;
+  --ff:        'Plus Jakarta Sans',system-ui,sans-serif;
+  --ff-mono:   'JetBrains Mono',monospace;
+  color-scheme: light;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#090F1C;--bg-card:#0F1A2E;--bg-header:#060C18;--bg-band:#0D1828;
+  --fg:#DDE6F8;--fg-muted:#7A8EAE;--fg-light:#4A5A78;
+  --accent:#3B82F6;--accent-3:#93C5FD;--success:#10B981;--warning:#F59E0B;
+  --danger:#EF4444;--border:#1A2B44;
+  --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.22);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#090F1C;--bg-card:#0F1A2E;--bg-header:#060C18;--bg-band:#0D1828;
+  --fg:#DDE6F8;--fg-muted:#7A8EAE;--fg-light:#4A5A78;
+  --accent:#3B82F6;--accent-3:#93C5FD;--success:#10B981;--warning:#F59E0B;
+  --danger:#EF4444;--border:#1A2B44;
+  --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 14px rgba(0,0,0,.22);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:var(--ff);background:var(--bg);color:var(--fg);
+  font-size:14px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0;
+}
+
+/* ── HEADER ── */
+.site-header{
+  background:var(--bg-header);
+  margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));
+  margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));
+  padding:32px max(24px,env(safe-area-inset-left,0px)) 0;
+  position:relative;overflow:hidden;
+}
+.site-header::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 55% 90% at 85% 40%,rgba(37,99,235,.2) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hdr{position:relative;max-width:1120px;margin:0 auto;}
+.eyebrow{
+  font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent-3);margin-bottom:8px;display:flex;align-items:center;gap:7px;
+}
+.eyebrow::before{content:'';display:inline-block;width:18px;height:2px;background:var(--accent-3);border-radius:1px;}
+.site-header h1{
+  font-size:clamp(20px,3.5vw,30px);font-weight:700;color:#fff;
+  line-height:1.25;margin-bottom:14px;text-wrap:balance;
+}
+.site-header h1 span{color:var(--accent-3);}
+.hdr-chips{display:flex;flex-wrap:wrap;gap:7px 14px;margin-bottom:24px;}
+.chip{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:6px;padding:3px 9px;font-size:11.5px;color:#B8CCF0;
+}
+
+/* ── CLASS TABS ── */
+.class-tabs{
+  display:flex;gap:0;
+  border-bottom:none;
+  margin:0 calc(-1 * max(24px,env(safe-area-inset-left,0px)));
+  padding:0 max(24px,env(safe-area-inset-left,0px));
+}
+.class-tab{
+  padding:11px 24px 10px;font-size:13px;font-weight:600;
+  color:#7A90BA;border:none;background:transparent;cursor:pointer;
+  border-bottom:3px solid transparent;transition:color .18s,border-color .18s;
+  letter-spacing:.01em;font-family:var(--ff);
+  border-radius:6px 6px 0 0;
+}
+.class-tab:hover{color:#C8D8F8;}
+.class-tab.active{color:#fff;border-bottom-color:var(--accent-3);}
+.class-tab .tab-label{display:flex;align-items:center;gap:7px;}
+.tab-badge{
+  font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;
+  background:rgba(255,255,255,.12);color:#AAC0F0;
+}
+.class-tab.active .tab-badge{background:rgba(96,165,250,.25);color:var(--accent-3);}
+
+/* ── INFO BAND ── */
+.info-band{
+  background:var(--bg-band);border-bottom:1px solid var(--border);
+  margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));
+  margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));
+  padding:14px max(24px,env(safe-area-inset-left,0px));
+}
+.info-inner{max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;}
+.info-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--fg-muted);}
+.info-item strong{color:var(--fg);font-weight:600;}
+.bdg{
+  display:inline-block;font-size:10.5px;font-weight:700;
+  letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:4px;
+}
+.bdg-blue{background:rgba(37,99,235,.12);color:var(--accent);}
+.bdg-green{background:rgba(5,150,105,.12);color:var(--success);}
+.bdg-yellow{background:rgba(217,119,6,.12);color:var(--warning);}
+
+/* ── PANELS ── */
+.main{max-width:1120px;margin:0 auto;padding-block:28px;}
+.panel{display:none;}
+.panel.active{display:block;}
+
+/* ── SEMESTER TABS ── */
+.sem-tabs{display:flex;gap:8px;margin-bottom:24px;}
+.sem-tab{
+  padding:8px 18px;font-size:12.5px;font-weight:600;border-radius:7px;
+  border:1.5px solid var(--border);background:var(--bg-card);
+  color:var(--fg-muted);cursor:pointer;font-family:var(--ff);
+  transition:all .15s;
+}
+.sem-tab:hover{border-color:var(--accent);color:var(--accent);}
+.sem-tab.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+
+.sem-panel{display:none;}
+.sem-panel.active{display:block;}
+
+/* ── LEGEND ── */
+.legend{
+  display:flex;flex-wrap:wrap;gap:9px;margin-bottom:22px;
+  padding:13px 16px;background:var(--bg-card);
+  border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);
+}
+.legend-title{width:100%;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-light);margin-bottom:3px;}
+.leg-item{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--fg-muted);}
+.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.dot-p{background:var(--accent);}
+.dot-d{background:var(--success);}
+.dot-x{background:var(--warning);}
+
+/* ── TABLE ── */
+.tw{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);}
+table{width:100%;border-collapse:collapse;min-width:800px;background:var(--bg-card);}
+col.c1{width:62px;}col.c2{width:21%;}col.c3{width:22%;}col.c4{width:29%;}col.c5{width:18%;}
+thead th{
+  background:var(--bg-header);color:#7A9ADA;font-size:10.5px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;padding:12px 13px;
+  text-align:left;border-bottom:2px solid rgba(59,130,246,.25);white-space:nowrap;
+}
+thead th:first-child{text-align:center;}
+tr.ph td{
+  background:var(--bg-band);color:var(--accent);font-size:10.5px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;padding:7px 13px;
+  border-top:2px solid var(--accent);border-bottom:1px solid var(--border);
+}
+tbody tr:not(.ph) td{
+  padding:13px 13px;border-bottom:1px solid var(--border);
+  vertical-align:top;font-size:12.5px;line-height:1.55;min-width:0;
+}
+tbody tr:not(.ph):last-child td{border-bottom:none;}
+tbody tr:not(.ph):hover td{background:rgba(37,99,235,.035);}
+
+/* cells */
+.wk{text-align:center;}
+.wn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(37,99,235,.1);color:var(--accent);
+  font-family:var(--ff-mono);font-size:12.5px;font-weight:700;
+}
+.wn.sp{background:rgba(217,119,6,.12);color:var(--warning);}
+.tt{font-weight:700;color:var(--fg);font-size:12.5px;margin-bottom:3px;line-height:1.3;text-wrap:balance;}
+.ts{font-size:11.5px;color:var(--fg-muted);line-height:1.5;}
+.tg{
+  display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.05em;
+  text-transform:uppercase;padding:2px 6px;border-radius:4px;margin-top:5px;
+  background:rgba(37,99,235,.1);color:var(--accent);
+}
+.tg.g{background:rgba(5,150,105,.1);color:var(--success);}
+.tg.y{background:rgba(217,119,6,.1);color:var(--warning);}
+.tg.r{background:rgba(220,38,38,.1);color:var(--danger);}
+
+ul.il,ul.al{list-style:none;display:flex;flex-direction:column;gap:5px;}
+ul.il li{display:flex;gap:7px;font-size:12px;line-height:1.45;color:var(--fg-muted);}
+ul.il li::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px;font-size:10.5px;}
+ul.al li{display:flex;gap:6px;font-size:12px;line-height:1.45;color:var(--fg-muted);}
+.ai{flex-shrink:0;width:15px;height:15px;margin-top:2px;opacity:.7;}
+
+.ap{
+  display:inline-flex;align-items:center;gap:4px;
+  font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;
+  margin-bottom:4px;margin-right:3px;
+}
+.ap.pj{background:rgba(37,99,235,.1);color:var(--accent);}
+.ap.po{background:rgba(5,150,105,.1);color:var(--success);}
+.ap.pr{background:rgba(217,119,6,.1);color:var(--warning);}
+.ap.cd{background:rgba(139,92,246,.1);color:#7C3AED;}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .ap.cd{color:#A78BFA;}}
+:root[data-theme="dark"] .ap.cd{color:#A78BFA;}
+.ad{font-size:11px;color:var(--fg-muted);margin-top:3px;line-height:1.4;}
+
+/* ── NOTES ── */
+.notes{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;}
+.nc{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);}
+.nct{font-size:12.5px;font-weight:700;color:var(--fg);margin-bottom:9px;display:flex;align-items:center;gap:7px;}
+.nc ul{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.nc ul li{font-size:12px;color:var(--fg-muted);line-height:1.55;}
+.nc ul li::before{content:'→ ';color:var(--accent);font-weight:700;}
+
+/* ── FOOTER ── */
+footer{
+  margin-top:36px;border-top:1px solid var(--border);
+  padding:18px 0 28px;text-align:center;font-size:11.5px;color:var(--fg-light);
+}
+</style>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="hdr">
+    <div class="eyebrow">Silabus Pembelajaran · SMK Kompetensi Keahlian RPL</div>
+    <h1>Rekayasa Perangkat Lunak<br><span>Kelas X · XI · XII — Web Development</span></h1>
+    <div class="hdr-chips">
+      <span class="chip">📅 Seluruh Tingkatan</span>
+      <span class="chip">🎯 Project-Based Learning</span>
+      <span class="chip">💻 Full-Stack Web Dev</span>
+      <span class="chip">📅 T.P. 2025/2026</span>
+    </div>
+
+    <!-- CLASS TABS -->
+    <div class="class-tabs" id="classTabs">
+      <button class="class-tab active" data-class="x" onclick="switchClass('x')">
+        <span class="tab-label">Kelas X <span class="tab-badge">Sem 1 & 2</span></span>
+      </button>
+      <button class="class-tab" data-class="xi" onclick="switchClass('xi')">
+        <span class="tab-label">Kelas XI <span class="tab-badge">Sem 1 & 2</span></span>
+      </button>
+      <button class="class-tab" data-class="xii" onclick="switchClass('xii')">
+        <span class="tab-label">Kelas XII <span class="tab-badge">Sem 2</span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- INFO BAND -->
+<div class="info-band" id="infoBand">
+  <!-- filled by JS -->
+</div>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- ═══════════════════════════════════════ KELAS X ═══ -->
+<div class="panel active" id="panel-x">
+  <div class="sem-tabs">
+    <button class="sem-tab active" onclick="switchSem('x',1)">Semester 1</button>
+    <button class="sem-tab" onclick="switchSem('x',2)">Semester 2</button>
+  </div>
+
+  <!-- X SEM 1 -->
+  <div class="sem-panel active" id="x-s1">
+    <div class="legend">
+      <div class="legend-title">Keterangan Asesmen</div>
+      <div class="leg-item"><span class="dot dot-p"></span>Project/Tugas Kode</div>
+      <div class="leg-item"><span class="dot dot-d"></span>Dokumen/Portofolio</div>
+      <div class="leg-item"><span class="dot dot-x"></span>Presentasi/Demo</div>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+      <thead><tr><th>Mgg</th><th>Materi Pokok / Fokus</th><th>IPK</th><th>Aktivitas Siswa</th><th>Asesmen</th></tr></thead>
+      <tbody>
+        <tr class="ph"><td colspan="5">⬡ Fase 1 — Dasar Pemrograman Web & Lingkungan Kerja (Mgg 1–4)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">1</span></td>
+          <td><div class="tt">Orientasi RPL & Setup Lingkungan</div><div class="ts">Pengenalan jurusan RPL, peran developer, instalasi VS Code, browser DevTools, Git dasar</div><span class="tg">Onboarding</span></td>
+          <td><ul class="il"><li>Menjelaskan peran front-end, back-end, dan full-stack developer</li><li>Menginstal dan mengonfigurasi VS Code beserta ekstensi esensial</li><li>Membuat akun GitHub dan repository pertama</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M5 8h6M5 5h6M5 11h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Membuat profil GitHub: foto, bio, pin repository</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Push file HTML "Hello World" pertama ke GitHub</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Eksplorasi DevTools: inspect element, console</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><br><div class="ad">GitHub repo aktif + file HTML pertama. Rubrik: profil lengkap, commit berhasil.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">2</span></td>
+          <td><div class="tt">HTML5 — Struktur & Semantik</div><div class="ts">Tag semantik (header, nav, main, section, footer), form, tabel, multimedia embed</div><span class="tg">HTML</span></td>
+          <td><ul class="il"><li>Menyusun halaman web dengan tag semantik yang tepat</li><li>Membuat form dengan berbagai tipe input dan validasi HTML</li><li>Menyematkan gambar, audio, dan video pada halaman</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Buat halaman profil diri: foto, biodata, hobi (HTML murni)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat halaman form pendaftaran dengan 8+ field berbeda</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Validasi HTML dengan W3C Validator</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><br><div class="ad">2 file HTML valid W3C di GitHub. Rubrik: semantik benar, form lengkap.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">3</span></td>
+          <td><div class="tt">CSS3 — Styling & Layout Dasar</div><div class="ts">Box model, selector, flexbox dasar, unit relatif (rem/em/%), warna, tipografi</div><span class="tg">CSS</span></td>
+          <td><ul class="il"><li>Menerapkan box model (margin, padding, border) dengan benar</li><li>Menggunakan flexbox untuk layout baris dan kolom</li><li>Mengimplementasikan variabel CSS (custom properties)</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Styling halaman profil dari minggu lalu dengan CSS terpisah</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat card komponen: avatar + nama + deskripsi + tombol</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M3 13V8a5 5 0 0 1 10 0v5" stroke="currentColor" stroke-width="1.4"/></svg>Buat layout 3-kolom sederhana dengan flexbox</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><br><div class="ad">Halaman terstyling + card komponen. Rubrik: penggunaan flexbox, variabel CSS.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">4</span></td>
+          <td><div class="tt">CSS Responsive & Grid</div><div class="ts">Media query, CSS Grid, mobile-first design, viewport meta, gambar responsif</div><span class="tg">Responsive</span></td>
+          <td><ul class="il"><li>Menerapkan mobile-first design dengan media query</li><li>Membangun layout grid multi-kolom yang responsif</li><li>Memastikan tampilan konsisten di berbagai ukuran layar</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Buat halaman galeri foto responsif (CSS Grid auto-fit)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Test responsivitas di DevTools (mobile/tablet/desktop)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Perbaiki layout profil agar mobile-friendly</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><br><div class="ad">Galeri responsif yang lulus tes 3 breakpoint. Rubrik: layout benar, tidak overflow.</div></td>
+        </tr>
+
+        <tr class="ph"><td colspan="5">⬡ Fase 2 — JavaScript Dasar & Interaktivitas (Mgg 5–9)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">5</span></td>
+          <td><div class="tt">JavaScript — Dasar & DOM</div><div class="ts">Variabel (let/const), tipe data, operator, kondisi, fungsi, DOM selection & manipulation</div><span class="tg">JavaScript</span></td>
+          <td><ul class="il"><li>Mendeklarasikan variabel dan fungsi dengan sintaks ES6+</li><li>Memanipulasi elemen DOM (getElementById, querySelector)</li><li>Menangani event dasar (click, input, submit)</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat kalkulator BMI: input berat+tinggi, hitung, tampilkan hasil</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Buat to-do list: tambah, hapus, tandai selesai</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Debug 3 kode JS bermasalah di console</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><br><div class="ad">Kalkulator BMI + To-do list fungsional. Rubrik: logika benar, event berjalan.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">6</span></td>
+          <td><div class="tt">JavaScript — Array, Object & Loop</div><div class="ts">Array methods (map, filter, forEach), object literal, JSON, iterasi data, localStorage dasar</div><span class="tg">JavaScript</span></td>
+          <td><ul class="il"><li>Menggunakan array methods untuk transformasi data</li><li>Menyimpan dan membaca data dari localStorage</li><li>Merender daftar data dinamis ke dalam DOM</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Render daftar produk dari array of objects ke kartu HTML</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Tambahkan fitur filter berdasarkan kategori</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Simpan data to-do ke localStorage (persist setelah refresh)</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><br><div class="ad">Halaman katalog produk dengan filter + to-do persisten. Rubrik: array methods, localStorage.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">7</span></td>
+          <td><div class="tt">Fetch API & JSON</div><div class="ts">Asynchronous JS, Promise, async/await, Fetch dari REST API publik, error handling</div><span class="tg">Async</span></td>
+          <td><ul class="il"><li>Mengambil data dari REST API publik menggunakan Fetch</li><li>Menggunakan async/await untuk kode asynchronous yang bersih</li><li>Menangani loading state dan error pada fetch</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/></svg>Fetch data dari JSONPlaceholder/OpenWeather API, tampilkan di DOM</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Tambahkan spinner loading dan pesan error</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat fitur search yang filter hasil API</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><br><div class="ad">Halaman data dari API publik dengan search + loading. Rubrik: async/await benar, error ditangani.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">8</span></td>
+          <td><div class="tt">Mini Project: Website Statis</div><div class="ts">Membangun website multi-halaman dengan HTML/CSS/JS murni: landing page + halaman fitur + kontak</div><span class="tg y">Project</span></td>
+          <td><ul class="il"><li>Merancang sitemap dan wireframe sederhana</li><li>Membangun navigasi antar halaman yang konsisten</li><li>Mengintegrasikan API publik pada salah satu halaman</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Buat website tema bebas (minimal 3 halaman, responsif)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Push ke GitHub, aktifkan GitHub Pages</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Presentasi singkat (3 menit) tentang website yang dibuat</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><span class="ap pr">🎤 Demo</span><br><div class="ad">Website live di GitHub Pages. Rubrik: desain, responsivitas, kode bersih, API integration.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">9</span></td>
+          <td><div class="tt">Pengenalan Bootstrap / Tailwind CSS</div><div class="ts">Utility-first vs component-based CSS, grid system framework, komponen siap pakai</div><span class="tg">Framework CSS</span></td>
+          <td><ul class="il"><li>Membangun layout dengan grid system Bootstrap/Tailwind</li><li>Menggunakan komponen UI siap pakai (navbar, card, modal)</li><li>Memahami perbedaan utility-first vs component-based</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Rebuild halaman landing page mini-project dengan Tailwind/Bootstrap</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Bandingkan ukuran kode: CSS murni vs framework</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Halaman landing page dengan framework CSS pilihan. Rubrik: penggunaan class utility/komponen.</div></td>
+        </tr>
+
+        <tr class="ph"><td colspan="5">⬡ Fase 3 — Pengenalan Back-End & Database (Mgg 10–14)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">10</span></td>
+          <td><div class="tt">Pengenalan PHP Dasar</div><div class="ts">Sintaks PHP, variabel, kondisi, loop, fungsi, include/require, form handling GET/POST</div><span class="tg">PHP</span></td>
+          <td><ul class="il"><li>Menulis skrip PHP dasar untuk memproses input form</li><li>Menggunakan superglobal $_GET, $_POST, $_SESSION</li><li>Membuat halaman dinamis dengan PHP</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Buat form kalkulator yang diproses server-side PHP</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat sistem login sederhana menggunakan session</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Kalkulator PHP + halaman login session. Rubrik: POST/GET benar, session aktif.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">11</span></td>
+          <td><div class="tt">MySQL & PDO Dasar</div><div class="ts">SQL dasar (SELECT/INSERT/UPDATE/DELETE), koneksi PHP-MySQL via PDO, prepared statement</div><span class="tg">Database</span></td>
+          <td><ul class="il"><li>Membuat database dan tabel menggunakan phpMyAdmin</li><li>Melakukan operasi CRUD melalui skrip PHP dengan PDO</li><li>Menerapkan prepared statement untuk mencegah SQL Injection</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><ellipse cx="8" cy="5" rx="5" ry="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 5v6c0 1.38 2.24 2.5 5 2.5s5-1.12 5-2.5V5" stroke="currentColor" stroke-width="1.3"/></svg>Buat tabel siswa: id, nama, kelas, nilai</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat CRUD sederhana: tampil, tambah, edit, hapus data siswa</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Aplikasi CRUD data siswa berjalan di localhost. Rubrik: PDO benar, prepared statement.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">12</span></td>
+          <td><div class="tt">Proyek Akhir Semester 1: Aplikasi Web Sederhana</div><div class="ts">Membangun aplikasi web lengkap dengan HTML/CSS/PHP/MySQL: sistem inventaris / buku tamu / katalog sekolah</div><span class="tg y">Project Akhir</span></td>
+          <td><ul class="il"><li>Merancang database minimal 2 tabel dengan relasi</li><li>Membangun aplikasi CRUD multi-halaman yang fungsional</li><li>Menerapkan validasi input dan keamanan dasar</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Pilih tema: buku tamu / inventaris / katalog nilai siswa</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Submit ke GitHub + demo ke guru (screen share)</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><span class="ap po">📄 Dokumen</span><span class="ap pr">🎤 Demo</span><br><div class="ad">ERD + kode aplikasi fungsional + demo live. Rubrik holistik: desain, fungsi, keamanan, presentasi.</div></td>
+        </tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <!-- X SEM 2 -->
+  <div class="sem-panel" id="x-s2">
+    <div class="legend">
+      <div class="legend-title">Keterangan Asesmen</div>
+      <div class="leg-item"><span class="dot dot-p"></span>Project/Tugas Kode</div>
+      <div class="leg-item"><span class="dot dot-d"></span>Dokumen/Portofolio</div>
+      <div class="leg-item"><span class="dot dot-x"></span>Presentasi/Demo</div>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+      <thead><tr><th>Mgg</th><th>Materi Pokok / Fokus</th><th>IPK</th><th>Aktivitas Siswa</th><th>Asesmen</th></tr></thead>
+      <tbody>
+        <tr class="ph"><td colspan="5">⬡ Fase 1 — OOP PHP & MVC Manual (Mgg 1–4)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">1</span></td>
+          <td><div class="tt">OOP PHP — Class & Object</div><div class="ts">Class, object, property, method, constructor, encapsulation, inheritance dasar</div><span class="tg">OOP</span></td>
+          <td><ul class="il"><li>Membuat class dengan property dan method yang tepat</li><li>Menerapkan encapsulation dengan access modifier</li><li>Menggunakan inheritance untuk mengurangi duplikasi kode</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat class Produk dengan property & method CRUD</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Buat class User extends Produk: tambah role & permission</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">File PHP OOP dengan minimal 2 class. Rubrik: encapsulation benar, inheritance berfungsi.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">2</span></td>
+          <td><div class="tt">Pola MVC Manual PHP</div><div class="ts">Memisahkan Model (DB), View (tampilan), Controller (logika), routing sederhana dengan .htaccess</div><span class="tg">Arsitektur</span></td>
+          <td><ul class="il"><li>Membangun struktur folder MVC dari nol</li><li>Memisahkan logic database (Model) dari tampilan (View)</li><li>Membuat router URL sederhana</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Refactor CRUD Sem 1 ke struktur MVC manual</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Buat diagram alur request: URL → Controller → Model → View</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><span class="ap po">📄 Diagram</span><br><div class="ad">Aplikasi CRUD dengan struktur MVC + diagram alur. Rubrik: pemisahan layer benar.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">3</span></td>
+          <td><div class="tt">Vue.js 3 — Pengenalan & Reaktivitas</div><div class="ts">Vue via CDN, template syntax, v-bind, v-model, v-if/v-for, reactive ref/computed</div><span class="tg">Vue.js</span></td>
+          <td><ul class="il"><li>Membuat komponen Vue.js sederhana dengan Composition API</li><li>Menggunakan v-model untuk two-way binding form</li><li>Merender daftar data dinamis dengan v-for</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Buat form input dinamis dengan Vue (tanpa backend)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat daftar tugas interaktif dengan computed (filter done/todo)</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">2 halaman Vue.js via CDN berfungsi. Rubrik: reaktivitas benar, v-model/v-for digunakan.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">4</span></td>
+          <td><div class="tt">Integrasi Vue.js + PHP API</div><div class="ts">Membuat PHP API endpoint JSON, fetch dari Vue, CORS handling, tampil data dari database</div><span class="tg">Integrasi</span></td>
+          <td><ul class="il"><li>Membuat endpoint PHP yang mengembalikan respons JSON</li><li>Mengambil data API PHP dari Vue.js menggunakan Axios</li><li>Menampilkan data database di komponen Vue</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><ellipse cx="8" cy="5" rx="5" ry="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 5v6c0 1.38 2.24 2.5 5 2.5s5-1.12 5-2.5V5" stroke="currentColor" stroke-width="1.3"/></svg>Buat API PHP: GET /api/products.php mengembalikan JSON</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Render data produk dari database ke komponen Vue</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Halaman Vue yang menampilkan data dari PHP+MySQL. Rubrik: data tampil, error ditangani.</div></td>
+        </tr>
+
+        <tr class="ph"><td colspan="5">⬡ Fase 2 — Proyek Web Dinamis & Rilis (Mgg 5–10)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">5</span></td>
+          <td><div class="tt">Git Workflow & Kolaborasi</div><div class="ts">Branching strategy, merge/rebase, pull request, penyelesaian conflict, GitHub Issues</div><span class="tg g">Git</span></td>
+          <td><ul class="il"><li>Membuat branch fitur dan merge ke main dengan pull request</li><li>Menyelesaikan merge conflict secara mandiri</li><li>Menggunakan GitHub Issues untuk manajemen tugas</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Simulasi kolaborasi: buat 2 branch fitur, merge via PR</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Sengaja buat conflict, selesaikan, dan commit hasil resolve</li></ul></td>
+          <td><span class="ap po">📄 Portofolio</span><div class="ad">History git dengan branch + merge + conflict resolve. Rubrik: alur PR bersih, pesan commit deskriptif.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">6</span></td>
+          <td><div class="tt">CSS Animation & UI Interaktif</div><div class="ts">CSS transition, keyframe animation, transform, hover effect, skeleton loading UI</div><span class="tg">UI/UX</span></td>
+          <td><ul class="il"><li>Menerapkan transisi CSS yang smooth pada interaksi pengguna</li><li>Membuat animasi keyframe untuk komponen UI</li><li>Merancang skeleton loading untuk tampilan data</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Tambahkan animasi pada navbar, card, dan tombol proyek</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat skeleton loading untuk halaman fetch API</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Halaman dengan animasi + skeleton loading. Rubrik: animasi halus, tidak mengganggu UX.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">7</span></td>
+          <td><div class="tt">Proyek Akhir: Aplikasi Web Full PHP+Vue</div><div class="ts">Membangun aplikasi full-stack sederhana: PHP API back-end + Vue.js front-end + MySQL</div><span class="tg y">Project Utama</span></td>
+          <td><ul class="il"><li>Merancang dan membangun REST API PHP dengan minimal 3 resource</li><li>Membangun SPA Vue.js yang mengonsumsi API tersebut</li><li>Mendeploy ke GitHub Pages (frontend) + hosting gratis (backend)</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Pilih tema: sistem nilai / jadwal / kontak sekolah / blog</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Submit GitHub repo + URL live + dokumentasi singkat</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M6 6l4 2-4 2V6Z" fill="currentColor"/></svg>Demo live ke guru (5 menit)</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><span class="ap po">📄 Dokumen</span><span class="ap pr">🎤 Demo</span><br><div class="ad">Aplikasi full-stack live + README. Rubrik: kelengkapan fitur, koneksi API, kode bersih, presentasi.</div></td>
+        </tr>
+      </tbody>
+    </table></div>
+    <div class="notes">
+      <div class="nc"><div class="nct"><svg width="14" height="14" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" stroke="var(--accent)" stroke-width="1.4"/><path d="M8 5v3.5M8 10.5v.5" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round"/></svg>Catatan Kelas X</div><ul><li>Fokus pada fondasi yang kuat: HTML semantik, CSS responsif, JS dasar</li><li>Gunakan proyek nyata bertema kehidupan sekolah agar lebih relevan</li><li>GitHub wajib aktif sejak minggu pertama sebagai portofolio jangka panjang</li><li>Semester 2 mulai memperkenalkan framework ringan (Vue CDN) sebelum tooling berat</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ KELAS XI ═══ -->
+<div class="panel" id="panel-xi">
+  <div class="sem-tabs">
+    <button class="sem-tab active" onclick="switchSem('xi',1)">Semester 1</button>
+    <button class="sem-tab" onclick="switchSem('xi',2)">Semester 2</button>
+  </div>
+
+  <!-- XI SEM 1 -->
+  <div class="sem-panel active" id="xi-s1">
+    <div class="legend">
+      <div class="legend-title">Keterangan Asesmen</div>
+      <div class="leg-item"><span class="dot dot-p"></span>Project/Tugas Kode</div>
+      <div class="leg-item"><span class="dot dot-d"></span>Dokumen/Portofolio</div>
+      <div class="leg-item"><span class="dot dot-x"></span>Presentasi/Demo</div>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+      <thead><tr><th>Mgg</th><th>Materi Pokok / Fokus</th><th>IPK</th><th>Aktivitas Siswa</th><th>Asesmen</th></tr></thead>
+      <tbody>
+        <tr class="ph"><td colspan="5">⬡ Fase 1 — Laravel Fundamentals (Mgg 1–5)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">1</span></td>
+          <td><div class="tt">Setup Laravel & Ekosistem</div><div class="ts">Composer, laravel new, struktur folder, Artisan CLI, routing dasar, Blade template engine</div><span class="tg">Laravel</span></td>
+          <td><ul class="il"><li>Menginstal Laravel dan menjalankan development server</li><li>Memahami struktur folder MVC Laravel</li><li>Membuat route dan view Blade pertama</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Install Laravel, jalankan <code>php artisan serve</code></li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat 5 route + view Blade dengan layout (extends/section)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Buat halaman about dinamis dari array data di controller</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Laravel berjalan + 5 route + layout Blade. Rubrik: struktur benar, Blade extends berfungsi.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">2</span></td>
+          <td><div class="tt">Eloquent ORM & Migration</div><div class="ts">Model Eloquent, migration, seeder, factory, relasi hasMany/belongsTo, query builder</div><span class="tg">Database</span></td>
+          <td><ul class="il"><li>Membuat migration dan menjalankannya dengan Artisan</li><li>Menggunakan Eloquent untuk operasi CRUD</li><li>Mendefinisikan relasi antar model</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><ellipse cx="8" cy="5" rx="5" ry="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 5v6c0 1.38 2.24 2.5 5 2.5s5-1.12 5-2.5V5" stroke="currentColor" stroke-width="1.3"/></svg>Buat migration Post & Category dengan relasi belongsTo</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Isi data dengan Factory + Faker (50 post dummy)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Tampilkan post dengan eager loading (with('category'))</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Model + migration + seeder berjalan, relasi tampil. Rubrik: eager loading benar, N+1 dihindari.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">3</span></td>
+          <td><div class="tt">Laravel CRUD Lengkap + Validasi</div><div class="ts">Resource controller, form request validation, flash message, CSRF protection, file upload</div><span class="tg">CRUD</span></td>
+          <td><ul class="il"><li>Membangun resource controller dengan 7 method RESTful</li><li>Menerapkan validasi server-side menggunakan Form Request</li><li>Mengimplementasikan upload file dengan storage Laravel</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Bangun CRUD artikel: judul, isi, gambar, kategori</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Validasi: judul min 10 char, gambar max 2MB, kategori required</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Flash message sukses/gagal pada setiap operasi</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><div class="ad">Aplikasi CRUD artikel fungsional. Rubrik: validasi benar, upload berhasil, flash message muncul.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">4</span></td>
+          <td><div class="tt">Authentication & Authorization</div><div class="ts">Laravel Breeze/Sanctum, middleware, gate & policy, role-based access control (admin/user)</div><span class="tg">Auth</span></td>
+          <td><ul class="il"><li>Mengimplementasikan autentikasi dengan Laravel Breeze</li><li>Membuat middleware custom untuk cek role</li><li>Menerapkan Policy untuk otorisasi akses resource</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M8 2 3 5v4c0 3 2.5 5.5 5 6 2.5-.5 5-3 5-6V5L8 2Z" stroke="currentColor" stroke-width="1.3"/></svg>Install Breeze, setup autentikasi lengkap</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="6" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M2 14c0-2.76 2.24-5 5-5h2" stroke="currentColor" stroke-width="1.3"/></svg>Tambah kolom role (admin/user) ke tabel users</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat middleware: hanya admin boleh hapus artikel</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Auth berfungsi + RBAC admin/user. Rubrik: login/register benar, middleware aktif, akses terbatas.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">5</span></td>
+          <td><div class="tt">Laravel API Resource & JSON</div><div class="ts">API routes, Resource class, API Resource Collection, pagination JSON, Sanctum token auth untuk API</div><span class="tg">REST API</span></td>
+          <td><ul class="il"><li>Membuat API endpoint dengan API Resource yang terstruktur</li><li>Mengimplementasikan pagination pada respons API</li><li>Mengamankan API dengan Sanctum token</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Buat API Resource untuk model Article dengan relasi</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Test semua endpoint di Postman, export collection</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><span class="ap po">📄 Postman</span><br><div class="ad">API Resource berjalan + Postman collection. Rubrik: struktur JSON bersih, pagination ada.</div></td>
+        </tr>
+
+        <tr class="ph"><td colspan="5">⬡ Fase 2 — Vue 3 + Vite & Full-Stack (Mgg 6–10)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">6</span></td>
+          <td><div class="tt">Vue 3 + Vite Setup & Composition API</div><div class="ts">npm create vue, SFC (.vue), Composition API (setup, ref, computed, watch), Vue Router</div><span class="tg">Vue.js</span></td>
+          <td><ul class="il"><li>Membuat project Vue 3 dengan Vite dan struktur SFC</li><li>Menggunakan Composition API (ref, computed, lifecycle hooks)</li><li>Mengatur routing multi-halaman dengan Vue Router</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Setup project Vue 3 + Vite, buat 4 halaman dengan router</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat komponen reusable: Button, Card, Modal</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Implementasi route guard: redirect jika belum login</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">SPA Vue 3 dengan 4 halaman + komponen reusable. Rubrik: Composition API, route guard.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">7</span></td>
+          <td><div class="tt">Pinia State Management</div><div class="ts">Store Pinia (defineStore), state, getters, actions, persistedstate, sharing state antar komponen</div><span class="tg">State</span></td>
+          <td><ul class="il"><li>Membuat store Pinia untuk manajemen state global</li><li>Menggunakan getters dan actions yang tepat</li><li>Mengimplementasikan cart/auth store yang persisten</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Buat authStore: token, user, isLoggedIn, login/logout action</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Buat cartStore: items, total, addItem/removeItem</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Auth store + cart store berfungsi di multi komponen. Rubrik: state reaktif, action benar.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">8</span></td>
+          <td><div class="tt">Integrasi Vue + Laravel API</div><div class="ts">Axios interceptors, token management, CORS konfigurasi Laravel, tampil CRUD dari API ke SPA</div><span class="tg">Full-Stack</span></td>
+          <td><ul class="il"><li>Mengonfigurasi Axios baseURL dan interceptor token</li><li>Menangani 401 Unauthorized secara otomatis (redirect login)</li><li>Membangun CRUD artikel di SPA yang terhubung ke Laravel API</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/></svg>Konfigurasi Axios: baseURL, Authorization header, 401 handler</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Bangun halaman artikel: list, detail, create, edit, delete</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><div class="ad">SPA Vue terhubung ke Laravel API, CRUD berfungsi. Rubrik: token auth, error handling, UI responsif.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">9</span></td>
+          <td><div class="tt">Proyek Mid-Semester: Blog/CMS Sederhana</div><div class="ts">Aplikasi blog/CMS full-stack: Laravel API + Vue SPA + auth + CRUD + kategori + search</div><span class="tg y">Project Mid</span></td>
+          <td><ul class="il"><li>Membangun aplikasi full-stack dengan minimal 3 entitas</li><li>Mengintegrasikan search/filter pada data</li><li>Menerapkan autentikasi dan otorisasi dari backend ke frontend</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Bangun blog: post, kategori, user (3 entity)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Demo ke guru + peer review (1 teman jadi penguji)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Push ke GitHub dengan README + ERD</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><span class="ap po">📄 Dokumen</span><span class="ap pr">🎤 Demo</span><br><div class="ad">Blog/CMS live di localhost + dokumentasi. Rubrik holistik: fitur, arsitektur, UI, kode bersih.</div></td>
+        </tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <!-- XI SEM 2 -->
+  <div class="sem-panel" id="xi-s2">
+    <div class="legend">
+      <div class="legend-title">Keterangan Asesmen</div>
+      <div class="leg-item"><span class="dot dot-p"></span>Project/Tugas Kode</div>
+      <div class="leg-item"><span class="dot dot-d"></span>Dokumen/Portofolio</div>
+      <div class="leg-item"><span class="dot dot-x"></span>Presentasi/Demo</div>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+      <thead><tr><th>Mgg</th><th>Materi Pokok / Fokus</th><th>IPK</th><th>Aktivitas Siswa</th><th>Asesmen</th></tr></thead>
+      <tbody>
+        <tr class="ph"><td colspan="5">⬡ Fase 1 — Advanced Features & Performa (Mgg 1–4)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">1</span></td>
+          <td><div class="tt">Advanced Eloquent & Query Optimization</div><div class="ts">Scope, mutator/accessor, query scopes, subquery, eager loading lanjut, database indexing</div><span class="tg">Laravel</span></td>
+          <td><ul class="il"><li>Membuat local scope untuk filter data yang reusable</li><li>Menggunakan withCount, withSum untuk aggregate</li><li>Menerapkan index pada kolom yang sering di-query</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><ellipse cx="8" cy="5" rx="5" ry="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 5v6c0 1.38 2.24 2.5 5 2.5s5-1.12 5-2.5V5" stroke="currentColor" stroke-width="1.3"/></svg>Refactor query blog dengan scope: published(), byCategory()</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Bandingkan query time sebelum/sesudah index (EXPLAIN)</li></ul></td>
+          <td><span class="ap po">📄 Laporan</span><div class="ad">Laporan perbandingan query time + kode scope. Rubrik: scope benar, N+1 hilang, index diterapkan.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">2</span></td>
+          <td><div class="tt">Laravel Queue, Job & Notifikasi</div><div class="ts">Queue worker, Job dispatch, email notification (Mailable), event/listener, real-time dengan Pusher/Reverb</div><span class="tg">Advanced</span></td>
+          <td><ul class="il"><li>Membuat Job untuk tugas berat (kirim email, proses gambar)</li><li>Mendispatch Job ke queue dan memantau dengan Horizon</li><li>Membuat notifikasi email menggunakan Mailable</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Buat Job SendWelcomeEmail, dispatch saat register</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Test dengan Mailtrap (email sandbox), verifikasi diterima</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Job berhasil dieksekusi + email diterima di Mailtrap. Rubrik: queue berjalan, email terformat.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">3</span></td>
+          <td><div class="tt">Testing Laravel (PHPUnit + Pest)</div><div class="ts">Unit test, Feature test, database factories dalam test, assertion HTTP, mock & fake</div><span class="tg">Testing</span></td>
+          <td><ul class="il"><li>Menulis feature test untuk endpoint API (auth, CRUD)</li><li>Menggunakan RefreshDatabase dan Factory dalam test</li><li>Mencapai coverage minimal 60% pada controller utama</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M6 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" stroke="currentColor" stroke-width="1.3"/><path d="m9 9 4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Tulis test untuk: login, register, CRUD post (min 8 test)</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Jalankan <code>php artisan test --coverage</code>, screenshot hasilnya</li></ul></td>
+          <td><span class="ap cd">🧪 Test Report</span><div class="ad">Minimal 8 test hijau + screenshot coverage. Rubrik: assertion tepat, test isolasi bersih.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">4</span></td>
+          <td><div class="tt">Vue 3 Advanced — Composables & TypeScript</div><div class="ts">Composable functions (useApi, useAuth), TypeScript dasar di Vue, defineProps/defineEmits typed</td><span class="tg">Vue.js</span></td>
+          <td><ul class="il"><li>Membuat composable reusable untuk logika fetch dan auth</li><li>Menambahkan TypeScript dasar pada props dan emits</li><li>Memisahkan logika bisnis ke composable yang testable</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Buat <code>useApi.ts</code>: loading, error, data state terstandar</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Refactor halaman blog untuk pakai composable</li></ul></td>
+          <td><span class="ap pj">📁 Tugas</span><div class="ad">Composable useApi + refactor halaman. Rubrik: kode reusable, TypeScript props typed.</div></td>
+        </tr>
+
+        <tr class="ph"><td colspan="5">⬡ Fase 2 — Proyek Capstone & Deployment (Mgg 5–10)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">5</span></td>
+          <td><div class="tt">Desain Sistem & Arsitektur Proyek Capstone</div><div class="ts">Perencanaan proyek besar: ERD kompleks, arsitektur API, wireframe, pembagian modul</div><span class="tg y">Capstone</span></td>
+          <td><ul class="il"><li>Merancang ERD dengan minimal 5 tabel dan 3 relasi</li><li>Mendokumentasikan spesifikasi API (minimal 15 endpoint)</li><li>Membuat wireframe UI untuk semua halaman utama</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Pilih tema capstone: e-commerce mini / sistem sekolah / booking</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Submit dokumen perencanaan: ERD + API spec + wireframe</li></ul></td>
+          <td><span class="ap po">📄 Dokumen</span><div class="ad">Dokumen perencanaan lengkap. Rubrik: ERD relasi benar, API spec terstruktur, wireframe ada.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">6</span></td>
+          <td><div class="tt">Pembangunan Capstone — Backend</div><div class="ts">Implementasi Laravel API lengkap: auth, CRUD semua resource, relasi, validasi, file upload</div><span class="tg y">Capstone</span></td>
+          <td><ul class="il"><li>Membangun semua endpoint API sesuai spesifikasi minggu 5</li><li>Menerapkan API Resource dan pagination konsisten</li><li>Lulus semua feature test yang ditulis</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><ellipse cx="8" cy="5" rx="5" ry="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 5v6c0 1.38 2.24 2.5 5 2.5s5-1.12 5-2.5V5" stroke="currentColor" stroke-width="1.3"/></svg>Coding sprint backend: migrasi + model + controller + resource</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Test semua endpoint di Postman, update collection</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><div class="ad">Backend API berjalan di localhost + Postman collection lengkap. Rubrik: semua endpoint sesuai spec.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">7</span></td>
+          <td><div class="tt">Pembangunan Capstone — Frontend SPA</div><div class="ts">Implementasi Vue 3 SPA: semua halaman, form, tabel data, komponen reusable, responsif</div><span class="tg y">Capstone</span></td>
+          <td><ul class="il"><li>Membangun semua halaman sesuai wireframe minggu 5</li><li>Menghubungkan setiap halaman ke endpoint API yang sesuai</li><li>Memastikan UI responsif di mobile dan desktop</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Coding sprint frontend: semua halaman + komponen</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Test di 3 ukuran layar: mobile (375px), tablet (768px), desktop</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><div class="ad">SPA fungsional terhubung ke API. Rubrik: semua halaman ada, data tampil, responsif.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">8</span></td>
+          <td><div class="tt">Deployment Capstone ke Production</div><div class="ts">Deploy Laravel ke Railway/Render, Vue ke Vercel, konfigurasi production, custom domain, SSL</div><span class="tg y">Deploy</span></td>
+          <td><ul class="il"><li>Mendeploy backend Laravel ke layanan cloud gratis</li><li>Mendeploy frontend Vue ke Vercel/Netlify dengan env variable</li><li>Memastikan aplikasi berjalan stabil di production</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M8 10V3M5 6l3-3 3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 13h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Deploy backend + frontend, catat kendala & solusi</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Verifikasi end-to-end: register, login, CRUD, file upload</li></ul></td>
+          <td><span class="ap pr">🌐 URL Live</span><span class="ap po">📄 Catatan Deploy</span><br><div class="ad">2 URL live (backend+frontend). Rubrik: stabilitas, HTTPS, semua fitur berfungsi di production.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">9</span></td>
+          <td><div class="tt">Dokumentasi & Portofolio GitHub</div><div class="ts">README profesional, API documentation (Postman/Swagger), badges, GitHub release, update LinkedIn</div><span class="tg g">Portofolio</span></td>
+          <td><ul class="il"><li>Menulis README yang lengkap dan profesional</li><li>Mempublikasikan dokumentasi API yang dapat diakses publik</li><li>Menambahkan proyek capstone ke profil LinkedIn</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/></svg>README: deskripsi, tech stack, instalasi, fitur, screenshot, link demo</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Publish Postman Docs dan sematkan link di README</li></ul></td>
+          <td><span class="ap po">📄 Portofolio</span><div class="ad">README bintang + Postman docs + LinkedIn update. Rubrik: kelengkapan dokumentasi, narasi profesional.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn sp">10</span></td>
+          <td><div class="tt">Presentasi Capstone & Evaluasi Akhir</div><div class="ts">Presentasi formal proyek capstone, peer review antar siswa, refleksi learning journey, persiapan Kelas XII</div><span class="tg y">Penilaian Akhir</span></td>
+          <td><ul class="il"><li>Mempresentasikan proyek secara sistematis dan percaya diri</li><li>Memberikan dan menerima feedback teknis dari teman</li><li>Merefleksikan progres kompetensi dari awal hingga akhir XI</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Presentasi 7 menit + tanya jawab 5 menit dari guru dan teman</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Tulis refleksi diri: 3 hal yang dikuasai, 2 tantangan, 1 target XII</li></ul></td>
+          <td><span class="ap pr">🎤 Presentasi</span><span class="ap pr">🌐 Demo</span><span class="ap po">📄 Refleksi</span><br><div class="ad">Rubrik holistik: fitur (30%), deployment (20%), dokumentasi (20%), presentasi (20%), refleksi (10%).</div></td>
+        </tr>
+      </tbody>
+    </table></div>
+    <div class="notes">
+      <div class="nc"><div class="nct"><svg width="14" height="14" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" stroke="var(--accent)" stroke-width="1.4"/><path d="M8 5v3.5M8 10.5v.5" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round"/></svg>Catatan Kelas XI</div><ul><li>Sem 1 membangun kompetensi Laravel dan Vue secara terpisah, lalu diintegrasikan</li><li>Sem 2 bergerak ke proyek skala lebih besar dengan arsitektur yang direncanakan</li><li>Testing (Pest/PHPUnit) wajib diperkenalkan di Sem 2 sebagai kebiasaan profesional</li><li>Portofolio capstone XI menjadi pondasi proyek akhir Kelas XII</li></ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ KELAS XII ═══ -->
+<div class="panel" id="panel-xii">
+  <div class="sem-tabs">
+    <button class="sem-tab active" onclick="switchSem('xii',2)">Semester 2 (Aktif)</button>
+  </div>
+  <div class="sem-panel active" id="xii-s2">
+    <div class="legend">
+      <div class="legend-title">Keterangan Asesmen</div>
+      <div class="leg-item"><span class="dot dot-p"></span>Project/Tugas Kode</div>
+      <div class="leg-item"><span class="dot dot-d"></span>Dokumen/Portofolio</div>
+      <div class="leg-item"><span class="dot dot-x"></span>Presentasi/Demo</div>
+    </div>
+    <div class="tw"><table>
+      <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+      <thead><tr><th>Mgg</th><th>Materi Pokok / Fokus</th><th>IPK</th><th>Aktivitas Siswa</th><th>Asesmen</th></tr></thead>
+      <tbody>
+        <tr class="ph"><td colspan="5">⬡ Fase 1 — Penguatan Framework & Arsitektur (Mgg 1–3)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">1</span></td>
+          <td><div class="tt">Kick-off Project Akhir & Tech Stack Review</div><div class="ts">Penetapan tema proyek akhir, review arsitektur MVC/MVVM, setup environment, Git branching strategy</div><span class="tg">Fondasi</span></td>
+          <td><ul class="il"><li>Menganalisis kebutuhan fungsional dan non-fungsional proyek akhir</li><li>Membuat struktur folder proyek sesuai konvensi framework</li><li>Mengonfigurasi Git repository dengan branching strategy (main/dev)</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/></svg>Menulis BRD mini: tujuan, fitur utama, target pengguna</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Push initial commit ke GitHub + buat README project</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3.5l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>Setup scaffold proyek (laravel new / npm create vue)</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><br><div class="ad">GitHub repo aktif + README + commit pertama. Rubrik: struktur rapi, deskripsi jelas.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">2</span></td>
+          <td><div class="tt">Database Design & Backend API</div><div class="ts">ERD, migrasi database, pembuatan REST API (Laravel/Express), validasi, Postman testing</div><span class="tg">Back-End</span></td>
+          <td><ul class="il"><li>Merancang skema database (ERD) sesuai kebutuhan proyek</li><li>Membuat dan menjalankan migrasi serta seeder</li><li>Membangun endpoint CRUD REST API dengan respons JSON terstandar</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><ellipse cx="8" cy="5" rx="5" ry="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M3 5v6c0 1.38 2.24 2.5 5 2.5s5-1.12 5-2.5V5" stroke="currentColor" stroke-width="1.3"/></svg>Buat ERD di dbdiagram.io + jalankan migrasi</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Minimal 3 endpoint CRUD + validasi input</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Uji semua endpoint di Postman, export collection</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><span class="ap po">📄 ERD</span><br><div class="ad">API fungsional + Postman collection + ERD di repo. Rubrik: endpoint benar, validasi aktif.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">3</span></td>
+          <td><div class="tt">Frontend Integration & State Management</div><div class="ts">Konsumsi API, Pinia/Vuex, routing SPA, autentikasi JWT/Sanctum, protected routes</div><span class="tg">Front-End</span></td>
+          <td><ul class="il"><li>Menghubungkan frontend dengan REST API menggunakan Axios</li><li>Menerapkan manajemen state untuk data dinamis</li><li>Mengimplementasikan autentikasi end-to-end</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Bangun halaman login + dashboard terkoneksi ke API</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Tampilkan data API di komponen list/table + loading state</li></ul></td>
+          <td><span class="ap pj">📁 Project</span><br><div class="ad">CRUD end-to-end 1 modul berjalan di localhost. Rubrik: fungsionalitas + koneksi API + error handling.</div></td>
+        </tr>
+        <tr class="ph"><td colspan="5">⬡ Fase 2 — Testing, Debugging & Keamanan (Mgg 4–5)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">4</span></td>
+          <td><div class="tt">Testing & Debugging Aplikasi Web</div><div class="ts">Unit testing (PHPUnit/Jest), debugging DevTools, error handling, exception response API</div><span class="tg">QA</span></td>
+          <td><ul class="il"><li>Menulis minimal 3 unit test untuk fungsi/endpoint kritis</li><li>Mengidentifikasi dan memperbaiki bug menggunakan DevTools</li><li>Menerapkan try-catch dan custom error response pada API</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M6 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" stroke="currentColor" stroke-width="1.3"/><path d="m9 9 4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Tulis test case untuk endpoint login, CRUD, validasi input</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Dokumentasi hasil testing (test report sederhana)</li></ul></td>
+          <td><span class="ap cd">🧪 Test Report</span><br><div class="ad">File test + laporan pass/fail + bug fixed. Rubrik: jumlah test, akurasi, solusi bug.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">5</span></td>
+          <td><div class="tt">Keamanan Web & Optimasi Performa</div><div class="ts">OWASP Top 10 dasar, CSRF, XSS, sanitasi input, Lighthouse audit, query optimization</div><span class="tg r">Security</span></td>
+          <td><ul class="il"><li>Mengidentifikasi celah keamanan umum pada kode proyek sendiri</li><li>Menerapkan proteksi CSRF token dan sanitasi input</li><li>Mengoptimalkan performa halaman (Lighthouse score ≥ 70)</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M8 2 3 5v4c0 3 2.5 5.5 5 6 2.5-.5 5-3 5-6V5L8 2Z" stroke="currentColor" stroke-width="1.3"/></svg>Audit keamanan proyek dengan checklist OWASP</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Screenshot Lighthouse sebelum & sesudah perbaikan</li></ul></td>
+          <td><span class="ap po">📄 Audit</span><br><div class="ad">Laporan audit keamanan + Lighthouse sebelum-sesudah. Rubrik: identifikasi masalah, solusi tepat.</div></td>
+        </tr>
+        <tr class="ph"><td colspan="5">⬡ Fase 3 — Deployment & Go-Live (Mgg 6–7)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">6</span></td>
+          <td><div class="tt">Deployment Frontend (Vercel / Netlify)</div><div class="ts">Build production, environment variable, CI/CD dari GitHub, HTTPS otomatis</div><span class="tg y">Deploy</span></td>
+          <td><ul class="il"><li>Melakukan build production aplikasi frontend tanpa error</li><li>Mengonfigurasi environment variable di platform hosting</li><li>Menghubungkan repo GitHub ke platform (auto-deploy on push)</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M8 10V3M5 6l3-3 3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 13h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Deploy Vue ke Vercel/Netlify via GitHub integration</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Verifikasi live URL berjalan + HTTPS aktif</li></ul></td>
+          <td><span class="ap pr">🌐 URL Live</span><br><div class="ad">Frontend live URL. Rubrik: terbuka tanpa error, login berfungsi, HTTPS aktif.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">7</span></td>
+          <td><div class="tt">Deployment Backend (Railway / Render / cPanel)</div><div class="ts">Deploy Laravel/Express, konfigurasi .env production, migrasi DB production, end-to-end test</div><span class="tg y">Deploy</span></td>
+          <td><ul class="il"><li>Mengonfigurasi .env untuk environment production</li><li>Menjalankan migrasi database di server production</li><li>Memastikan API endpoint dapat diakses dari frontend live</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Deploy backend ke Railway/Render/cPanel</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M13 4 7 10 4 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>End-to-end test: frontend live → backend live → DB production</li></ul></td>
+          <td><span class="ap pr">🌐 URL Live</span><span class="ap po">📄 Catatan</span><br><div class="ad">Fullstack live + catatan deployment (kendala & solusi). Rubrik: stabilitas, koneksi DB, API response.</div></td>
+        </tr>
+        <tr class="ph"><td colspan="5">⬡ Fase 4 — Portofolio Digital & Persiapan UKK (Mgg 8–10)</td></tr>
+        <tr>
+          <td class="wk"><span class="wn">8</span></td>
+          <td><div class="tt">Optimasi GitHub & Dokumentasi Teknis</div><div class="ts">README profesional, dokumentasi API (Postman/Swagger), badge, commit history bersih, GitHub Release</div><span class="tg g">Portofolio</span></td>
+          <td><ul class="il"><li>Membuat README.md dengan deskripsi, instalasi, fitur, screenshot</li><li>Mendokumentasikan semua endpoint API dengan contoh request/response</li><li>Membuat GitHub Release v1.0 dengan changelog</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/></svg>README: badge, screenshot, link demo, panduan instalasi</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Postman Docs atau SwaggerHub + buat Release v1.0</li></ul></td>
+          <td><span class="ap po">📄 Portofolio</span><br><div class="ad">Repo dengan README lengkap + API docs publik. Rubrik: profesionalisme dokumen.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn">9</span></td>
+          <td><div class="tt">LinkedIn & Personal Branding Digital</div><div class="ts">Profil LinkedIn profesional, project showcase post, menghubungkan GitHub ke LinkedIn</div><span class="tg g">Portofolio</span></td>
+          <td><ul class="il"><li>Melengkapi profil LinkedIn dengan pengalaman, skill, dan proyek</li><li>Menghubungkan GitHub profile ke LinkedIn dan CV</li><li>Membuat postingan showcase proyek akhir di LinkedIn</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="6" r="3" stroke="currentColor" stroke-width="1.3"/><path d="M2 14c0-2.76 2.24-5 5-5h2" stroke="currentColor" stroke-width="1.3"/></svg>Update LinkedIn: foto profesional, headline, 15+ skill</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M14 8H2M14 4H5M14 12H8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Post showcase proyek: teks + screenshot + link live</li></ul></td>
+          <td><span class="ap po">📄 Portofolio</span><br><div class="ad">Screenshot profil + link postingan showcase. Rubrik: kelengkapan profil, narasi, profesionalisme.</div></td>
+        </tr>
+        <tr>
+          <td class="wk"><span class="wn sp">10</span></td>
+          <td><div class="tt">Demo & Presentasi Portofolio Akhir</div><div class="ts">Presentasi proyek ke guru + teman, simulasi UKK, refleksi pembelajaran semester</div><span class="tg y">Penilaian Akhir</span></td>
+          <td><ul class="il"><li>Mempresentasikan proyek secara sistematis (problem → solusi → demo)</li><li>Menjelaskan keputusan teknis dan tantangan pengembangan</li><li>Menjawab pertanyaan teknis dari guru/penguji secara lisan</li></ul></td>
+          <td><ul class="al"><li><svg class="ai" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg>Slide presentasi 5–8 halaman + demo live aplikasi</li><li><svg class="ai" viewBox="0 0 16 16" fill="none"><path d="M8 2 3 5v4c0 3 2.5 5.5 5 6 2.5-.5 5-3 5-6V5L8 2Z" stroke="currentColor" stroke-width="1.3"/></svg>Simulasi tanya jawab teknis UKK-style (10 menit)</li></ul></td>
+          <td><span class="ap pr">🎤 Presentasi</span><span class="ap pr">🌐 Demo</span><span class="ap po">📄 Portofolio</span><br><div class="ad">Rubrik holistik: fitur (30%), deployment+kode (30%), presentasi (25%), portofolio digital (15%).</div></td>
+        </tr>
+      </tbody>
+    </table></div>
+    <div class="notes">
+      <div class="nc"><div class="nct"><svg width="14" height="14" fill="none" viewBox="0 0 16 16"><path d="M8 2 3 5v4c0 3 2.5 5.5 5 6 2.5-.5 5-3 5-6V5L8 2Z" stroke="var(--accent)" stroke-width="1.4"/></svg>Rekomendasi Stack per Kondisi</div><ul><li>Familiar PHP → Laravel + MySQL + Vue.js + Vercel + Railway</li><li>Fokus JS → Express.js + MongoDB + Vue/React + Vercel/Render</li><li>Keterbatasan internet → Localhost + deploy cPanel sekolah</li></ul></div>
+      <div class="nc"><div class="nct"><svg width="14" height="14" fill="none" viewBox="0 0 16 16"><rect x="2" y="2" width="12" height="12" rx="2" stroke="var(--success)" stroke-width="1.4"/></svg>Mekanisme Bimbingan Jarak Jauh</div><ul><li>Konsultasi via WA/Google Classroom 2× seminggu</li><li>Review kode via Pull Request GitHub (guru jadi reviewer)</li><li>Screencast progress per minggu (maks 5 menit)</li><li>Check-in mingguan via Google Form progress log</li></ul></div>
+      <div class="nc"><div class="nct"><svg width="14" height="14" fill="none" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" stroke="var(--warning)" stroke-width="1.4"/><path d="M8 5v3.5M8 10.5v.5" stroke="var(--warning)" stroke-width="1.6" stroke-linecap="round"/></svg>Catatan UKK / LSP-P1</div><ul><li>Proyek akhir selaras dengan skema UKK (Rekayasa Web)</li><li>GitHub aktif + portofolio live wajib sebelum UKK</li><li>Materi testing & security relevan untuk uji LSP-P1</li><li>ERD + API docs bisa jadi bukti portofolio LSP</li></ul></div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  Silabus RPL SMK · Kelas X, XI, XII · Web Development (PBL) · T.P. 2025/2026
+</footer>
+
+<script>
+const INFO = {
+  x: {
+    stack: 'HTML/CSS/JS + PHP + MySQL + Vue CDN',
+    pendekatan: 'Fondasi & Eksplorasi',
+    fokus: 'Dasar Web + OOP + MVC Manual',
+    badgeStack: 'bdg-blue', badgePend: 'bdg-green', badgeFokus: 'bdg-yellow'
+  },
+  xi: {
+    stack: 'Laravel + Vue 3 + Vite + Pinia',
+    pendekatan: 'Framework Penuh',
+    fokus: 'CRUD Kompleks + Testing + Capstone',
+    badgeStack: 'bdg-blue', badgePend: 'bdg-green', badgeFokus: 'bdg-yellow'
+  },
+  xii: {
+    stack: 'MEVN / Laravel (pilihan)',
+    pendekatan: 'PBL Mandiri / Bimbingan Jauh',
+    fokus: 'Portofolio + Deployment + UKK',
+    badgeStack: 'bdg-blue', badgePend: 'bdg-green', badgeFokus: 'bdg-yellow'
+  }
+};
+
+function updateInfoBand(cls) {
+  const d = INFO[cls];
+  document.getElementById('infoBand').innerHTML = `
+    <div class="info-inner">
+      <div class="info-item"><strong>Stack Utama:</strong><span class="bdg ${d.badgeStack}">${d.stack}</span></div>
+      <div class="info-item"><strong>Pendekatan:</strong><span class="bdg ${d.badgePend}">${d.pendekatan}</span></div>
+      <div class="info-item"><strong>Fokus:</strong><span class="bdg ${d.badgeFokus}">${d.fokus}</span></div>
+      <div class="info-item" style="margin-left:auto;font-size:11.5px;color:var(--fg-light);">T.P. 2025/2026</div>
+    </div>`;
+}
+
+function switchClass(cls) {
+  document.querySelectorAll('.class-tab').forEach(t => t.classList.toggle('active', t.dataset.class === cls));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + cls));
+  updateInfoBand(cls);
+}
+
+function switchSem(cls, sem) {
+  const panel = document.getElementById('panel-' + cls);
+  panel.querySelectorAll('.sem-tab').forEach((t, i) => t.classList.toggle('active', i === sem - 1));
+  panel.querySelectorAll('.sem-panel').forEach(p => {
+    p.classList.toggle('active', p.id === cls + '-s' + sem);
+  });
+}
+
+updateInfoBand('x');
+</script>
+
+</body></html>
